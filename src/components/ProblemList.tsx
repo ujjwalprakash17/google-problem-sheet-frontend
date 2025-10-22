@@ -22,17 +22,9 @@ import {
 } from "lucide-react";
 
 import { problemList } from "../helper/ProblemList";
-import type { Problem } from "../interfaces/Types";
+import type { Problem, ProblemStats } from "../interfaces/Types";
 
-interface ProblemStats {
-  total: number;
-  completed: number;
-  progress: number;
-  easy: { total: number; completed: number };
-  medium: { total: number; completed: number };
-  hard: { total: number; completed: number };
-  streak: number;
-}
+
 
 interface Notes {
   [key: string]: string;
@@ -58,8 +50,6 @@ const ProblemList: React.FC = () => {
         completed: false,
         completedDate: null,
       }));
-      console.log("Initializing problems:", initialProblems.length);
-      debugger;
       setProblems(initialProblems);
     }
 

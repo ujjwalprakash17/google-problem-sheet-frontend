@@ -10,4 +10,15 @@ interface Problem {
   completedDate?: string | null;
 }
 
-export type { Problem };
+interface ProblemStats {
+  total: number;
+  completed: number;
+  progress: number;
+  easy: { total: number; completed: number };
+  medium: { total: number; completed: number };
+  hard: { total: number; completed: number };
+  streak: number;
+}
+
+
+export type { Problem, ProblemStats };
